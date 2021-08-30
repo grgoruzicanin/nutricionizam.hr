@@ -1,0 +1,257 @@
+.BMI_BF_WHR_calculator {
+    font-family:sans-serif;
+    margin:0;
+}
+.BMI_BF_WHR_calculator .clearfix {
+    *zoom:1;
+}
+.BMI_BF_WHR_calculator .clearfix:before,.BMI_BF_WHR_calculator .clearfix:after {
+    display:table;
+    content:"";
+    line-height:0;
+}
+.BMI_BF_WHR_calculator .clearfix:after {
+    clear:both;
+}
+.BMI_BF_WHR_calculator *{
+    box-sizing:border-box;
+}
+.BMI_BF_WHR_calculator a {
+    text-decoration:none;
+    color:#00b085;
+}
+.BMI_BF_WHR_calculator a:active,.BMI_BF_WHR_calculator a:focus,.BMI_BF_WHR_calculator a:hover {
+    text-decoration:none;
+}
+.BMI_BF_WHR_calculator .error_message {
+    display:none;
+    padding:20px;
+    background:#e74c3c;
+    color:#fff;
+    margin-bottom:15px;
+}
+.BMI_BF_WHR_calculator .error_message p {
+    margin:0;
+}
+.BMI_BF_WHR_calculator .error_message.shown {
+    display:block;
+}
+.BMI_BF_WHR_calculator h2 span {
+    color:#00b085;
+}
+.BMI_BF_WHR_calculator hr {
+    color:#00b085;
+    background-color:#00b085;
+    height:1px;
+    border:none;
+    margin-bottom:20px;
+}
+.BMI_BF_WHR_calculator .close {
+    color:#fff;
+    font-size:1em;
+    border-radius: 300px; 
+    line-height:1.2;
+    padding:10px 30px;
+    background-color:#00b085;
+    text-transform:uppercase;
+    display:block;
+    text-align:center;
+    font-style: Normal !important;
+    font-weight: 700 !important;
+    font-stretch: normal !important;
+    letter-spacing: 3px !important;
+}
+@media (min-width:640px) {
+    .BMI_BF_WHR_calculator .close {
+        display:inline-block;
+    }
+}
+.BMI_BF_WHR_calculator .accordian .accordian-item {
+    margin-bottom:10px;
+}
+.BMI_BF_WHR_calculator .accordian .accordian-item.open .content.shown {
+    display:block;
+}
+.BMI_BF_WHR_calculator .accordian .accordian-item.open .title {
+    background-color:#00ca98;
+    font-weight: bold;
+}
+.BMI_BF_WHR_calculator .accordian .accordian-item .title {
+    font-size:15px;
+    margin:0;
+    display:block;
+    text-transform: uppercase;
+    background-color:#00b085;
+    color:#fff;
+    padding:10px 34px;
+    text-align:center;
+    border-radius:300px;
+    -webkit-transition:background-color 100ms ease-in-out;
+    transition:background-color 100ms ease-in-out;
+    font-family: "Jigsaw 2" !important;
+    font-style: Normal !important;
+    font-weight: 700 !important;
+    font-stretch: normal !important;
+    letter-spacing: 3px !important;
+}
+.BMI_BF_WHR_calculator .accordian .accordian-item .title:hover {
+    background-color:#00ca98;
+}
+.BMI_BF_WHR_calculator .accordian .accordian-item .content {
+    display:none;
+    padding:20px;
+    position:relative;
+}
+@media (min-width:640px){
+    .BMI_BF_WHR_calculator .accordian .accordian-item .content {
+        padding:30px;
+    }
+}
+.BMI_BF_WHR_calculator .accordian .accordian-item .content h2 {
+    margin-top:0;
+    font-size:25px;
+}
+.BMI_BF_WHR_calculator .accordian .accordian-item .result {
+    display:none;
+    padding:20px;
+}
+@media (min-width:640px) {
+    .BMI_BF_WHR_calculator .accordian .accordian-item .result {
+        padding:30px;
+    }
+}
+.BMI_BF_WHR_calculator .accordian .accordian-item .result.shown {
+    display:block;
+    -webkit-animation:fadeIn 200ms forwards;
+    animation:fadeIn 200ms forwards;
+}
+.BMI_BF_WHR_calculator .accordian .accordian-item .result .group {
+    margin-bottom:25px;
+}
+.BMI_BF_WHR_calculator .accordian .accordian-item .result .group:last-of-type {
+    margin-bottom:0;
+}
+.BMI_BF_WHR_calculator .accordian .accordian-item .result h2 {
+    margin-top:0;
+    font-size:25px;
+}
+@-webkit-keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
+@keyframes fadeIn{0%{opacity:0}100%{opacity:1}}
+.BMI_BF_WHR_calculator .form-group {
+    margin-bottom:15px;
+}
+.BMI_BF_WHR_calculator .form-group label {
+    display:inline-block;
+    font-size:17px;
+    margin-bottom:7px;
+}
+.BMI_BF_WHR_calculator .btn {
+    font-size:12px;
+    background-color:#333;
+    outline:none;
+    border:none;
+    display:inline-block;
+    color:#fff;
+    border-radius:300px;
+    text-decoration:none;
+    text-transform: uppercase;
+    padding:0.5em 1em !important;
+    -moz-osx-font-smoothing:auto;
+    -webkit-font-smoothing:subpixel-antialiased;
+    -webkit-transition:background-color 100ms ease-in-out;
+    transition:background-color 100ms ease-in-out;
+    font-family: "Jigsaw 2" !important;
+    font-style: Normal !important;
+    font-weight: 700 !important;
+    font-stretch: normal !important;
+    letter-spacing: 3px !important;
+}
+.BMI_BF_WHR_calculator .btn:hover {
+    background-color:#404040;
+}
+.BMI_BF_WHR_calculator .btn.btn-green {
+    background:#00b085;
+}
+.BMI_BF_WHR_calculator .btn.btn-green:hover {
+    background-color:#00ca98;
+}
+.BMI_BF_WHR_calculator input[type=text],.BMI_BF_WHR_calculator input[type=number] {
+    display:block;
+    padding:10px;
+    width:100%;
+    font-size:14px;
+    text-rendering:auto;
+    letter-spacing:normal;
+    word-spacing:normal;
+    text-transform:none;
+    text-indent:0;
+    text-shadow:none;
+    text-align:start;
+}
+.BMI_BF_WHR_calculator input.error {
+    border:1px solid #e74c3c;
+}
+.BMI_BF_WHR_calculator .row{*zoom:1}.BMI_BF_WHR_calculator .row:before,.BMI_BF_WHR_calculator .row:after {
+    display:table;
+    content:"";
+    line-height:0;
+}
+.BMI_BF_WHR_calculator .row:after {
+    clear:both;
+}
+.BMI_BF_WHR_calculator .col {
+    float:none;
+}
+@media (min-width:640px) {
+    .BMI_BF_WHR_calculator .col {
+        float:left;
+    }
+}
+.BMI_BF_WHR_calculator .col-50 {
+    width:100%;
+}
+@media (min-width:640px) {
+    .BMI_BF_WHR_calculator .col-50 {
+        width:50%;
+    }
+}
+.BMI_BF_WHR_calculator .howto_dialog {
+    display:none;
+    padding:20px;
+}
+@media (min-width:640px) {
+    .BMI_BF_WHR_calculator .howto_dialog {
+        padding:30px;
+    }
+}
+.BMI_BF_WHR_calculator .howto_dialog.shown {
+    display:block;
+}
+.BMI_BF_WHR_calculator .howto_dialog img {
+    display:block;
+}
+.external:first-of-type {
+        border-right: solid 1px rgba(255,255,255,.5);
+}
+.external:first-of-type a {
+        color: rgba(255,255,255,.9) !important;
+}
+.mobile-hide {
+    display: none!important;
+}
+@media (max-width:540px) {
+    .mobile-hide {
+        display: block!important;
+    }
+    .desktop-hide {
+        display: none!important;
+    }
+}
+#block-yui_3_17_2_6_1433862533338_5506 .sqs-editable-button, .sqs-block-button-element--small, .sqs-block-button .sqs-block-button-element--small {
+    border-radius: 300px !important;
+    font-size: 14px;
+}
+input.button.sqs-system-button.sqs-editable-button {
+    background: #00b38d;
+    border-color: #00b38d;
+}
