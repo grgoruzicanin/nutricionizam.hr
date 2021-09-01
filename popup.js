@@ -40,25 +40,28 @@ function createPopup() {
 }
 function closePopup() {
     document.getElementById('popup-overlay').style.display = 'none';
-    ga('send', 'event', {
-        eventCategory: 'Pop up',
-        eventAction: 'Zatvoren'
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'Popup',
+        eventAction: 'zatvoren'
     });
     setCookie2('popupStatus','closed', 7);
 }
 function openPopup() {
     if(getCookie2('popupStatus') != 'closed') {
         document.getElementById('popup-overlay').style.display = 'block';
-        ga('send', 'event', {
-            eventCategory: 'Pop up',
-            eventAction: 'Prikazan'
+        ga('send', {
+            hitType: 'event',
+            eventCategory: 'Popup',
+            eventAction: 'prikazan'
         });
     }
 }
 function analizaPopup() {
-    ga('send', 'event', {
-        eventCategory: 'Pop up',
-        eventAction: 'Analiza'
+    ga('send', {
+        hitType: 'event',
+        eventCategory: 'Popup',
+        eventAction: 'analiza'
     });
     setCookie2('popupStatus','closed', 1);
 }
