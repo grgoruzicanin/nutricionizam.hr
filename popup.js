@@ -1,6 +1,14 @@
 document.addEventListener("DOMContentLoaded", function(){
-    createPopup();
-    setTimeout(openPopup, 8000);
+    var location = window.location.href;
+    var exclude1 = "usluge";
+    var exclude2 = "analiza-prehrane";
+    if(location.includes(exclude1) || location.includes(exclude2)) {
+        return;
+    }
+    else {
+        createPopup();
+        setTimeout(openPopup, 8000);
+    }
 });
 function createPopup() {
     var popupOverlay = document.createElement('div');
