@@ -32,17 +32,29 @@ function createPopup() {
 }
 function closePopup() {
     document.getElementById('popup-overlay').style.display = 'none';
-    ga('send', 'event', 'Pop up', 'zatvaranje', 'Pop up');
+    gtag('event', 'Pop up', {
+        event_category: 'Pop up',
+        event_action: 'zatvaranje',
+        event_label: 'Pop up'
+    });
     setCookie2('popupStatus','closed', 7);
 }
 function openPopup() {
     if(getCookie2('popupStatus') != 'closed') {
         document.getElementById('popup-overlay').style.display = 'block';
-        ga('send', 'event', 'Pop up', 'prikazivanje', 'Pop up');
+        gtag('event', 'Pop up', {
+            event_category: 'Pop up',
+            event_action: 'prikazivanje',
+            event_label: 'Pop up'
+        });
     }
 }
 function analizaPopup() {
-    ga('send', 'event', 'Pop up', 'analiza', 'Pop up');
+    gtag('event', 'Pop up', {
+        event_category: 'Pop up',
+        event_action: 'analiza',
+        event_label: 'Pop up'
+    });
 }
 function setCookie2(name,value,days) {
     var expires = "";
