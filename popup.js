@@ -33,7 +33,11 @@ function createPopup() {
 function closePopup() {
     document.getElementById('popup-overlay').style.display = 'none';
     ga('send', 'event', 'Pop up', 'zatvaranje', 'Pop up');
-    setCookie('popupStatus','closed', 7);
+    var expires = "";
+    var date = new Date();
+    date.setTime(date.getTime() + (7*24*60*60*1000));
+    expires = "; expires=" + date.toUTCString();
+    document.cookie = "popupStatus" + "=" + ("closed" || "")  + expires + "; path=/";
 }
 function openPopup() {
     if(getCookie('popupStatus') != 'closed') {
@@ -44,15 +48,6 @@ function openPopup() {
 function analizaPopup() {
     ga('send', 'event', 'Pop up', 'analiza', 'Pop up');
 }
-function setCookie(name,value,days) {
-    var expires = "";
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days*24*60*60*1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
-}
 function getCookie(name) {
     var nameEQ = name + "=";
     var ca = document.cookie.split(';');
@@ -62,7 +57,4 @@ function getCookie(name) {
         if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
     }
     return null;
-}
-function eraseCookie(name) {   
-    document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
 }
