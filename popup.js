@@ -55,6 +55,7 @@ function analizaPopup() {
         event_action: 'analiza',
         event_label: 'Pop up'
     });
+    setCookie2('popupStatus','closed', 1);
 }
 function setCookie2(name,value,days) {
     var expires = "";
