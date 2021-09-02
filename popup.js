@@ -10,6 +10,16 @@ document.addEventListener("DOMContentLoaded", function(){
         setTimeout(openPopup, 8000);
     }
 });
+window.addEventListener('beforeunload', function(e) {
+    if (document.getElementById('popup-overlay').style.display == 'block')
+    {
+        ga('send', {
+            hitType: 'event',
+            eventCategory: 'Popup',
+            eventAction: 'izlazak'
+        });
+    }
+});
 function createPopup() {
     var popupOverlay = document.createElement('div');
     popupOverlay.setAttribute("id", "popup-overlay");
@@ -28,7 +38,7 @@ function createPopup() {
     popupWindow.appendChild(popupTitle);
     var popupSubtitle = document.createElement('div');
     popupSubtitle.setAttribute("id", "popup-subtitle");
-    popupSubtitle.innerHTML = "Saznaj gdje u prehrani griješiš i na mail primi individualne preporuke za njeno unaprjeđenje od naših stručnjaka.";
+    popupSubtitle.innerHTML = "Saznaj gdje u prehrani griješiš i na mail primi individualne preporuke za njeno unaprjeđenje.";
     popupWindow.appendChild(popupSubtitle);
     var popupButton = document.createElement("a");
     popupButton.setAttribute("id", "popup-button");
