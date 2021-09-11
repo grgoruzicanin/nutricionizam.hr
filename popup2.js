@@ -34,7 +34,7 @@ function createPopup() {
     popupWindow.appendChild(popupClose);
     var popupTitle = document.createElement('div');
     popupTitle.setAttribute("id", "popup-title");
-    popupTitle.innerHTML = "Besplatna analiza prehrane";
+    popupTitle.innerHTML = "Poboljšaj svoju prehranu";
     popupWindow.appendChild(popupTitle);
     var popupSubtitle = document.createElement('div');
     popupSubtitle.setAttribute("id", "popup-subtitle");
