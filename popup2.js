@@ -34,11 +34,11 @@ function createPopup() {
     popupWindow.appendChild(popupClose);
     var popupTitle = document.createElement('div');
     popupTitle.setAttribute("id", "popup-title");
-    popupTitle.innerHTML = "Poboljšaj svoju prehranu";
+    popupTitle.innerHTML = "Unaprijedi svoju prehranu";
     popupWindow.appendChild(popupTitle);
     var popupSubtitle = document.createElement('div');
     popupSubtitle.setAttribute("id", "popup-subtitle");
-    popupSubtitle.innerHTML = "Ako ti se sviđa naš demo pogledaj usluge koje nudimo.";
+    popupSubtitle.innerHTML = "";
     popupWindow.appendChild(popupSubtitle);
     var popupButton = document.createElement("a");
     popupButton.setAttribute("id", "popup-button");
@@ -55,10 +55,10 @@ function closePopup() {
         eventCategory: 'Popup',
         eventAction: 'zatvoren'
     });
-    setCookie2('popupStatus','closed', 7);
+    setCookie2('popupStatus2','closed', 7);
 }
 function openPopup() {
-    if(getCookie2('popupStatus') != 'closed') {
+    if(getCookie2('popupStatus2') != 'closed') {
         document.getElementById('popup-overlay').style.display = 'block';
         ga('send', {
             hitType: 'event',
@@ -73,7 +73,7 @@ function analizaPopup() {
         eventCategory: 'Popup',
         eventAction: 'analiza'
     });
-    setCookie2('popupStatus','closed', 1);
+    setCookie2('popupStatus2','closed', 1);
 }
 function setCookie2(name,value,days) {
     var expires = "";
