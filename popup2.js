@@ -15,9 +15,9 @@ window.addEventListener('beforeunload', function(e) {
     {
         ga('send', {
             hitType: 'event',
-            eventCategory: 'Popup',
+            eventCategory: 'PopupDemo',
             eventAction: 'izlazak'
-        });
+        }, {nonInteraction: true});
     }
 });
 function createPopup() {
@@ -43,7 +43,7 @@ function createPopup() {
     var popupButton = document.createElement("a");
     popupButton.setAttribute("id", "popup-button");
     popupButton.setAttribute("href", "https://nutricionizam.hr/usluge");
-    popupButton.setAttribute("onclick", "analizaPopup();");
+    popupButton.setAttribute("onclick", "povratakPopup();");
     popupButton.innerHTML = "nutricionizam.hr usluge";
     popupWindow.appendChild(popupButton);
 
@@ -52,9 +52,9 @@ function closePopup() {
     document.getElementById('popup-overlay').style.display = 'none';
     ga('send', {
         hitType: 'event',
-        eventCategory: 'Popup',
+        eventCategory: 'PopupDemo',
         eventAction: 'zatvoren'
-    });
+    }, {nonInteraction: true});
     setCookie2('popupStatus2','closed', 7);
 }
 function openPopup() {
@@ -62,16 +62,16 @@ function openPopup() {
         document.getElementById('popup-overlay').style.display = 'block';
         ga('send', {
             hitType: 'event',
-            eventCategory: 'Popup',
+            eventCategory: 'PopupDemo',
             eventAction: 'prikazan'
-        });
+        }, {nonInteraction: true});
     }
 }
-function analizaPopup() {
+function povratakPopup() {
     ga('send', {
         hitType: 'event',
-        eventCategory: 'Popup',
-        eventAction: 'analiza'
+        eventCategory: 'PopupDemo',
+        eventAction: 'povratak'
     });
     setCookie2('popupStatus2','closed', 1);
 }

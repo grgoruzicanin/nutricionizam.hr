@@ -17,7 +17,7 @@ window.addEventListener('beforeunload', function(e) {
             hitType: 'event',
             eventCategory: 'Popup',
             eventAction: 'izlazak'
-        });
+        }, {nonInteraction: true});
     }
 });
 function createPopup() {
@@ -53,8 +53,8 @@ function closePopup() {
     ga('send', {
         hitType: 'event',
         eventCategory: 'Popup',
-        eventAction: 'zatvoren'
-    });
+        eventAction: 'zatvoren'     
+    }, {nonInteraction: true});
     setCookie2('popupStatus','closed', 7);
 }
 function openPopup() {
@@ -64,7 +64,7 @@ function openPopup() {
             hitType: 'event',
             eventCategory: 'Popup',
             eventAction: 'prikazan'
-        });
+        }, {nonInteraction: true});
     }
 }
 function analizaPopup() {
